@@ -1,4 +1,7 @@
+const color = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f']
 
+//helper functions
+import h from '../../../helpers'
 
 export function stocksReducer(state = [], action){
   const io  = require('socket.io-client')
@@ -7,21 +10,23 @@ export function stocksReducer(state = [], action){
   switch(action.type){
     case 'FIND_STOCK':
 let stocksFounds = {...state}
-// {x: Date.parse(d.timestamp), y: d.close}
+
 let data = action.payload.data.map((d, i)=>{
   return {x: new Date(Date.parse(d.timestamp)).toLocaleString().split(',')[0], y: d.close}
 })
+
+let g = h.randomColor(color)
+
 let newState = [...state, {
   label: action.payload.name,
   data,
   fill: false,
-  backgroundColor: 'red',
-  // pointBorderColor: 'green',
-  borderColor: 'purple',
+  backgroundColor: g,
+  borderColor: g,
   borderWidth: 1,
-  radius: 1
+  radius: 0
   }]
-  console.log('NEW_STATE', newState);
+
   socket.emit('display', {stocks: newState})
     return newState
     break;
