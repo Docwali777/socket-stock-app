@@ -1,6 +1,5 @@
 const axios = require('axios');
 const config = require('../config')
-console.log(config);
 
 console.log();
 //findStock function
