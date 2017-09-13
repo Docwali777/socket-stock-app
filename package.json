@@ -6,10 +6,14 @@
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.18.0",
+    "chart.js": "^2.7.0",
     "d3": "3.5.17",
     "express": "^4.15.4",
     "rd3": "^0.8.0",
     "react": "^15.6.1",
+    "react-chartjs": "^0.8.0",
+    "react-chartjs-2": "^2.6.2",
+    "react-d3": "^0.4.0",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
@@ -31,6 +35,6 @@
     "dev": "webpack --env=dev",
     "start": "node server",
     "conserver": "concurrently \" yarn run start \"  \"yarn run dev \"  ",
-     "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js"
   }
 }
