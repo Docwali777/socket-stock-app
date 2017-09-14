@@ -47167,9 +47167,7 @@ function stocksReducer() {
 
 var axios = __webpack_require__(134);
 var config = __webpack_require__(435);
-console.log(config);
 
-console.log();
 //findStock function
 var findStock = function findStock(stock, res) {
   var URL = 'http://marketdata.websol.barchart.com/getHistory.json?apikey=' + config.BAR_CHART_API_KEY + '&symbol=' + stock + '&type=daily&startDate=20160831000000';
@@ -48069,7 +48067,9 @@ module.exports = function spread(callback) {
 
 if (process.env.NODE_ENV === 'production') {
   module.exports = __webpack_require__(436);
+  console.log('prod', process.env.BAR_CHART_API_KEY);
 } else {
+  console.log('dev', process.env.BAR_CHART_API_KEY);
   module.exports = __webpack_require__(437);
 }
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))

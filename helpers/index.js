@@ -1,7 +1,6 @@
 const axios = require('axios');
 const config = require('../config')
 
-console.log();
 //findStock function
 const findStock = (stock, res) =>{
   const URL = `http://marketdata.websol.barchart.com/getHistory.json?apikey=${config.BAR_CHART_API_KEY}&symbol=${stock}&type=daily&startDate=20160831000000`
