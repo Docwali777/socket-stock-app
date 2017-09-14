@@ -47182,7 +47182,7 @@ var randomColor = function randomColor(data) {
     colorString += data[random];
   }
   var randomC = colorString.slice(0, 6);
-  console.log('#' + randomC);
+
   return '#' + randomC;
 };
 module.exports = {
@@ -48067,9 +48067,7 @@ module.exports = function spread(callback) {
 
 if (process.env.NODE_ENV === 'production') {
   module.exports = __webpack_require__(436);
-  console.log('prod', process.env.BAR_CHART_API_KEY);
 } else {
-  console.log('dev', process.env.BAR_CHART_API_KEY);
   module.exports = __webpack_require__(437);
 }
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
@@ -67732,16 +67730,42 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Repo = function Repo() {
   return _react2.default.createElement(
     'div',
-    null,
+    { className: 'container' },
     _react2.default.createElement(
-      'h3',
-      { className: 'text-center' },
-      ' Project Information'
-    ),
-    _react2.default.createElement(
-      'p',
-      null,
-      'This is an application to graph the Stock Market daily closing data'
+      'div',
+      { className: 'row text-center' },
+      _react2.default.createElement(
+        'h3',
+        { className: 'text-center' },
+        ' Project Information'
+      ),
+      _react2.default.createElement(
+        'h4',
+        null,
+        'This is an application to graph the Stock Market daily closing prices'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'The ',
+        _react2.default.createElement(
+          'a',
+          { href: 'https://www.barchartondemand.com/free' },
+          'BarChart on Demand API'
+        ),
+        ' was used to obtain stock prices'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'This projected based on Free Code Camps ',
+        _react2.default.createElement(
+          'a',
+          { href: 'https://www.freecodecamp.org/challenges/chart-the-stock-market' },
+          'Chart the Stock Market'
+        ),
+        ' '
+      )
     )
   );
 };

@@ -17,7 +17,7 @@ const  randomColor =(data) =>{
 
 }
 let randomC = (colorString.slice(0, 6));
-console.log(`#${randomC}`);
+
 return `#${randomC}`
 }
 module.exports  = {
